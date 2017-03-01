@@ -99,10 +99,19 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "HelloXamarin.dll" comes first in this list. */
 		"HelloXamarin.dll",
+		"Xamarin.Android.Support.Compat.dll",
+		"Xamarin.Android.Support.Core.UI.dll",
+		"Xamarin.Android.Support.Core.Utils.dll",
+		"Xamarin.Android.Support.Media.Compat.dll",
+		"Xamarin.Android.Support.Fragment.dll",
 		"Xamarin.Android.Support.v4.dll",
-		"Xamarin.GooglePlayServices.AppInvite.dll",
-		"Xamarin.GooglePlayServices.Base.dll",
 		"Xamarin.GooglePlayServices.Basement.dll",
+		"Xamarin.GooglePlayServices.Tasks.dll",
+		"Xamarin.Firebase.Common.dll",
+		"Xamarin.Firebase.Iid.dll",
+		"Xamarin.Firebase.Messaging.dll",
+		"Xamarin.GooglePlayServices.Base.dll",
+		"Xamarin.GooglePlayServices.AppInvite.dll",
 		"Xamarin.GooglePlayServices.Maps.dll",
 		"System.Threading.dll",
 		"System.Runtime.dll",
@@ -117,5 +126,5 @@ class MonoPackageManager_Resources {
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_21";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_24";
 }

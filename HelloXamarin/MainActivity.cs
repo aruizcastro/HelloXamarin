@@ -7,6 +7,7 @@ using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.Content.PM;
 using Android.Locations;
+using Android.Gms.Tasks;
 
 namespace HelloXamarin
 {
@@ -30,6 +31,19 @@ namespace HelloXamarin
           
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
+            if (!GetString(Resource.String.google_app_id).Equals("1:1041344326014:android:87b1fba527305236"))
+                throw new System.Exception("Invalid Json file");
+
+            /*Task.Run(() => {
+                var instanceId = FirebaseInstanceId.Instance;
+                instanceId.DeleteInstanceId();
+                Android.Util.Log.Debug("TAG", "{0} {1}", instanceId.Token, instanceId.GetToken(GetString(Resource.String.gcm_defaultSenderId), Firebase.Messaging.FirebaseMessaging.InstanceIdScope));
+
+
+            });*/
+
+
+
             MapFragment mapFragment = (MapFragment)FragmentManager.FindFragmentById(Resource.Id.map);
             mapFragment.GetMapAsync(this);
 
